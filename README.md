@@ -68,18 +68,18 @@ From this Data, we had 3 Questions:
 
 
 We start by creating a copy of DF and naming it mdf, using the replace function we can then replace the Area ID with their corresponding names such as 01 with Central. We do this for all of the area code up to 23 different values. Using a pivot table, with the Stop_year data that displays the year date of the arrest. We can create a table using the Area as the index and ‘count’ as the aggfunc. Using the year arrest in our function, we can tally the total arrests by their year instance in these areas. This can be used to show the total arrests by the area within our dataset. 
-![bar_area!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L73)
+![bar_area!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/bar_area.png)
 
 
 Because of our usage of count, our pivot table should display the amount of arrests within an area. We can then draw a conclusion from using a visualization to neatly display our findings.
 Data: From this visualization , there are a few areas that stand out as having more arrests. The 2 top outliers seem to be 77th street and Newton. From this data we can see that there have been significantly more stoppages within the Newton area and 77th street area. Both contain dangerous areas in LA such as Slauson Avenue.
-![77!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L78)
-![newton!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L79)
+![77!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/77th_police.png)
+![newton!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/newton_police.png)
 
 
 Basis for Stop:
 Similarly, to analyze the basis for a police stoppage encounter. We created another pivot table using Basis for stop as the index, Stop Time as the values, and count as aggfunc. This is done similarly to display the counts of the encounters by the basis of the stop. We create another visualization to analyze the results.
-![basis_for_stop!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L84)
+![basis_for_stop!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/basis_for_stop.png)
 
 Data:
 From looking at the results, we can see that the largest reason for stoppages were from Officers Witnessing a commission of a branch. This was followed by a matched suspect description and reasonable suspicion of crime. 
@@ -90,7 +90,7 @@ The result of a stop is created by having many individual yes and no in the resu
 
 Result of Stop:
 To analyze the results of the stoppage, we must create a pivot table using the Stop Time column as the value, Result column as the Index, and using count as the aggfunc. This will display the amount of occurrences of a specific result from the stoppage.
-![result_of_stop!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L95)
+![result_of_stop!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/result_of_stop.png)
 
 
 Analysis:
@@ -100,20 +100,18 @@ Correlation
 
 Race and Basis for Stop:
 To see the correlation between the Race column and the Basis of Stop column, we create a crosstab from those columns using True Normalize and True Margins. This creates a messy and long crosstab that is hard to read, to better understand it we can use a visualization. Using a heat map, we can see the correlation values without having to read long float values.
-![heatmap1!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/images/heatmap_reason&race.png)
+![heatmap1!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/heatmap_reason&race.png)
 
 This heat map shows the correlations and shows very little correlation between Races and Basis of stop. The only noticeable results show Hispanics and Witnessing a crime but shows a result of .26 which is low to consider a strong correlation. This also shows total values for the Race stoppages and the basis for stop showing 0.5 for Hispanic stoppages and 0.51 for Officer Witnessing Crime.
 
 Area ID and Race:
 Similarly, we can create a crosstab between Area ID and Race to display the table of correlation. We can use this correlation table to see if there is a relationship between stoppages of a race in certain areas.
-![heatmap2](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L111)
-![heatmap3](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L112)
-
+![heatmap2](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/heatmap_race&area.png)
 
 Looking at the heat map, we can see very little correlation between different races being stopped and the area they get stopped at. Similarly it shows about 0.49 correlation of Hispanics stoppages as the previous table.
 
 
 Basis for Stop and Result:
 Lastly, we create another correlation table using the Basis of Stop Column and The Result of Stop Column. This table can be used to identify if there is a relationship between cause and effect of a stoppage.
-![heatmap3!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/README.md#L120)
+![heatmap3!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/heatmap_bases&stop.png)
 From this heat map, we can visualize the correlations between the two columns and create conclusions from the observations. We can see that there is very little correlation from Basis and Result of stop. The highest values showing at 0.14 between Citation  and Officerwitnissing a crime. 0.14 is too low of a score to show correlation.
