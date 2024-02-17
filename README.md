@@ -3,7 +3,7 @@ Project Description: The goal of our project is to analyze what characteristics 
 
 
 Stratified Data Sampling: In our data we needed to perform a sampling method and decided to use stratified sampling. Had to take the Stop_Year column and copy it to a new column. Used a split and slice to parse and set the column to only have the year. Then used the groupby function on the Stop_Year with sampling 4000 per year. 2023 was a year with a low frequency of entries so that year was not included. Used the 1.3 gb approx file and the commented data below to sample from it. 
-
+![clean!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/40bd9e9e87d858a8030e97c9425dd513af19c06c/images/clean.png)
 
 
 Data Cleaning:
