@@ -9,7 +9,7 @@ Stratified Data Sampling: In our data we needed to perform a sampling method and
 
 Data Cleaning:
 In order for data to be used within our project, we performed cleaning methods before we proceed to use analysis methods. After we initialize the data, we proceed to convert (yes,no) categories within the data into numerical (0,1) so that we can include it within our functions during analysis. After deciding what columns would be most beneficial to our analysis, we remove the unused columns by using the drop functions in Pandas and rewrite them to the CSV file. This makes it easier for us to analyze and helps by removing large amounts of data that creates issues when trying to view the data.
-![data clean!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/data_cleaning.png)
+![data_clean!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/data_cleaning.png)
 ![race encoding!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/races_numerical.png)
 ![race encoding2!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/encoding.png)
 
@@ -86,7 +86,7 @@ From looking at the results, we can see that the largest reason for stoppages we
 
 Result of the Stop Clean:
 The result of a stop is created by having many individual yes and no in the result of the stoppage. We must clean the multiple result of action into binary 0,1 results instead of yes and No. We can then proceed to remove unnecessary characters from the columns to further clean. Creating a result column with all the possible results, which we can then create a new Column “Result” with all the values of the stoppage results. To finalize the cleaning, we replace the results from the Result Column and assign them a number to turn them into numerical values. 
-![result_clean1](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/images/result_stop_clean.png)
+![result_clean!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/a09900ffb5d7b5b12894a2700756bfcd240a9a50/images/result_stop_clean.png)
 
 Result of Stop:
 To analyze the results of the stoppage, we must create a pivot table using the Stop Time column as the value, Result column as the Index, and using count as the aggfunc. This will display the amount of occurrences of a specific result from the stoppage.
