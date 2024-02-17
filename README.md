@@ -9,10 +9,8 @@ Stratified Data Sampling: In our data we needed to perform a sampling method and
 
 Data Cleaning:
 In order for data to be used within our project, we performed cleaning methods before we proceed to use analysis methods. After we initialize the data, we proceed to convert (yes,no) categories within the data into numerical (0,1) so that we can include it within our functions during analysis. After deciding what columns would be most beneficial to our analysis, we remove the unused columns by using the drop functions in Pandas and rewrite them to the CSV file. This makes it easier for us to analyze and helps by removing large amounts of data that creates issues when trying to view the data.
-![data clean!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/072a6437019a7ff0e8d832e9e9ce43e907bdf598/images/data_cleaning.png)
-
+![data clean!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/data_cleaning.png)
 ![race encoding!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/races_numerical.png)
-
 ![race encoding2!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/encoding.png)
 
 K-Means:
@@ -25,7 +23,7 @@ To find the most optimal K for the data, we must perform the elbow method. We se
 From the graph, we analyze and find the inflection point to get the optimal K. In this case we choose K=3. We perform K means using the K means function and setting to 3 clusters and we fit the Kmeans variable into the data. After this is done, both the scatter plot with the Kmeans labels is printed and we also print the regular scatterplot with from the sata to show a comparison of both graphs for better understanding.
 ![kmeans!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/images/kmeans_data_plot.png)
 
-![kmeans2!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/072a6437019a7ff0e8d832e9e9ce43e907bdf598/images/kmeans.png)
+![kmeans2!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/70c67c93c6429ad403b75b75c6eb8889fb588cad/images/elbow_knn.png)
 
 From the data (with ‘Area ID’ on the x bar and ‘Stop Time’ on the y bar), we can see that stops are happening at regular intervals throughout the entire day.
 
