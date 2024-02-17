@@ -23,9 +23,9 @@ Similarly, we convert the Stop time by converting the values from STR to INT, we
 
 To find the most optimal K for the data, we must perform the elbow method. We set our x as Area ID and y as Stop Time and we use the Zip function to map the values so we can use them to create the elbow. Using a for loop, the cluster gets fitted into the data and we append the inertia value into the empty array we created. This for loop iterates for 11 K’s and we plot the inertia for all the K’s to get our elbow method graph.
 From the graph, we analyze and find the inflection point to get the optimal K. In this case we choose K=3. We perform K means using the K means function and setting to 3 clusters and we fit the Kmeans variable into the data. After this is done, both the scatter plot with the Kmeans labels is printed and we also print the regular scatterplot with from the sata to show a comparison of both graphs for better understanding.
-!(kmeans!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/images/kmeans_data_plot.png]
+![kmeans!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/images/kmeans_data_plot.png)
 
-!(kmeans2!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/README.md#L28]
+![kmeans2!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/README.md#L28)
 
 From the data (with ‘Area ID’ on the x bar and ‘Stop Time’ on the y bar), we can see that stops are happening at regular intervals throughout the entire day.
 
@@ -33,31 +33,31 @@ KNN with Regressor Analysis:
 Before starting the KNN Regressor function we must clean the data and convert it as floats. This will make the data columns usable for the following functions since the included data is given as STR and will not work. For other values we also must turn categorical values into numerical values, we grab the perceived Gender and replace the terms with numbers from 0-4.
 
 We can use the elbow method to find a good K for the KNN regressor. We must use the X and Y train values and for them to be a temporary model. We can then predict, using the temporary model from Xtest. After this we can also calculate MSE in the for loop to see which resulting K is better.
-!(knn regression1!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_code.png]
-!(knn regression2!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_knn.png]
+![knn regression1!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_code.png)
+![knn regression2!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_knn.png)
 
 Asian (1), Black/African American (2), Hispanic/Latino(a) (3), Middle Eastern or South Asian (4), Native American (5), Pacific Islander (6), White (7)
 
 
 After we determined the K which is N_Neighbors= 3, then we use that to define the grid of feature values. This graph shows the relationship between Race and Age, the 3, 7 are the most group that are stopped. We think that because they have the most population in U.S.
-!(plot_race_age!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/plot_race_age.png]
+![plot_race_age!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/plot_race_age.png)
 
 For the following graph. Female(0), Male(1), Transgender woman/girl(2), Transgender man/boy(3), Nonconforming(4).
 
 Do the same thing as above with N_Neighbors= 3, then we define the grid of feature values with Gender vs. Age. Female and Male are the majority to be stopped.
-!(plot_gender_age!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/plot_age&gender.png]
+![plot_gender_age!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/plot_age&gender.png)
 
 Using the graph we can visualize the KNN regressor function for Perceived Gender and the Perceived age. We see that for 0-Female, the perceived age was around 35. 1-Male= 42, 2-Trans woman = 35, Trans Man = 40, 04-Non Conforming =40.
 
 Extra KNN:
-!(extra knn!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/mse_graph.png]
-!(plot_area_race!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/plot_area&race.png]
+![extra knn!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/mse_graph.png)
+![plot_area_race!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/plot_area&race.png)
 
 We then do a extra KNN for Race vs. Area ID:
 We are replacing the AGE with Area ID, then compare it with Race. For that, we are going to calculate the new MSE and make a new elbow graph.
 Now we visualize relationship between Race and Area ID. 
 As the graph shown above, we know of four areas where the largest number of people are stopped.
 There are: Area ID: 10(West Valley),11(North East),12(77th street),13(Newton) 
-!(cmap!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/cmap.png]
+![cmap!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/cmap.png)
 
 Finally, we visualize the relationship between Race and Gender determined by AGE by scatter plot. Also, use different colors to indicate how many of these dots have the same or close color according to the Perceived AGE. In this case, The same or similar color means people were stopped for the same/similar reason or feature.
