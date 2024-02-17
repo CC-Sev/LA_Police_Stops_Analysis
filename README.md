@@ -23,9 +23,9 @@ Similarly, we convert the Stop time by converting the values from STR to INT, we
 
 To find the most optimal K for the data, we must perform the elbow method. We set our x as Area ID and y as Stop Time and we use the Zip function to map the values so we can use them to create the elbow. Using a for loop, the cluster gets fitted into the data and we append the inertia value into the empty array we created. This for loop iterates for 11 K’s and we plot the inertia for all the K’s to get our elbow method graph.
 From the graph, we analyze and find the inflection point to get the optimal K. In this case we choose K=3. We perform K means using the K means function and setting to 3 clusters and we fit the Kmeans variable into the data. After this is done, both the scatter plot with the Kmeans labels is printed and we also print the regular scatterplot with from the sata to show a comparison of both graphs for better understanding.
-!(kmeans!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/kmeans_data_plot.png]
+!(kmeans!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/images/kmeans_data_plot.png]
 
-!(kmeans21)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/kmeans.png]
+!(kmeans2!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/7cf8bb18b12376e2f3a8b1b6c719c9bda175adc3/README.md#L28]
 
 From the data (with ‘Area ID’ on the x bar and ‘Stop Time’ on the y bar), we can see that stops are happening at regular intervals throughout the entire day.
 
@@ -33,8 +33,8 @@ KNN with Regressor Analysis:
 Before starting the KNN Regressor function we must clean the data and convert it as floats. This will make the data columns usable for the following functions since the included data is given as STR and will not work. For other values we also must turn categorical values into numerical values, we grab the perceived Gender and replace the terms with numbers from 0-4.
 
 We can use the elbow method to find a good K for the KNN regressor. We must use the X and Y train values and for them to be a temporary model. We can then predict, using the temporary model from Xtest. After this we can also calculate MSE in the for loop to see which resulting K is better.
-!(knn regression1)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_code.png]
-!(knn regression2)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_knn.png]
+!(knn regression1!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_code.png]
+!(knn regression2!)[https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/fa468649a2280e3aa63ad66cc6ab91d8bfe46cfe/images/elbow_knn.png]
 
 Asian (1), Black/African American (2), Hispanic/Latino(a) (3), Middle Eastern or South Asian (4), Native American (5), Pacific Islander (6), White (7)
 
