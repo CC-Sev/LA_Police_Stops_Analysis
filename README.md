@@ -90,7 +90,7 @@ The result of a stop is created by having many individual yes and no in the resu
 
 Result of Stop:
 To analyze the results of the stoppage, we must create a pivot table using the Stop Time column as the value, Result column as the Index, and using count as the aggfunc. This will display the amount of occurrences of a specific result from the stoppage.
-![result_of_stop!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/9ee016342524151d3e1113595ef85eef074edd4b/images/result_of_stop.png)
+![result_of_stop!](https://github.com/CC-Sev/LA_Police_Stops_Analysis/blob/c12823ba1ca1ddebac50b134598c18f498cfa23b/images/result_of%20stop.png)
 
 
 Analysis:
